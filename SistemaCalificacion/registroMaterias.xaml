@@ -1,0 +1,66 @@
+﻿<Window x:Class="SistemaCalificacion.registroMaterias"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaCalificacion"
+        mc:Ignorable="d"
+        Title="registroMaterias" Height="620" Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="420" Margin="0,0,-0.4,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="794" Opacity="0.5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="imagen/3.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle HorizontalAlignment="Left" Height="590" Margin="0,0,-0.4,0" Stroke="Black" VerticalAlignment="Top" Width="994">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="imagen/3.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <StackPanel HorizontalAlignment="Left" Height="570" Margin="34,10,0,0" VerticalAlignment="Top" Width="260">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF030000" Offset="1"/>
+                    <GradientStop Color="#FF020101"/>
+                    <GradientStop Color="#FF413A3A" Offset="0.887"/>
+                    <GradientStop Color="#FFD00808" Offset="0.489"/>
+                    <GradientStop Color="#FFE59130" Offset="0.274"/>
+                    <GradientStop Color="#FF5F0505" Offset="0.683"/>
+                    <GradientStop Color="#FF16104C" Offset="0.136"/>
+                    <GradientStop Color="#FFF6E602" Offset="0.356"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Separator Height="15"></Separator>
+            <Label Content="REGISTRO DE MATERIAS" Width="200" Foreground="#FFF6F4F4" FontWeight="Bold" FontSize="16"></Label>
+            <Separator Height="15" Foreground="#FFF7F6F6"></Separator>
+            <Label Content="Código de materia" FontWeight="Bold" Foreground="#FFF6F2F2"></Label>
+            <TextBox x:Name="txtCodigo" Height="23" TextWrapping="Wrap" AutomationProperties.IsRequiredForForm="True"/>
+            <Label Content="Nombre" FontWeight="Bold"/>
+            <TextBox x:Name="txtNombres" Height="23" TextWrapping="Wrap" AutomationProperties.IsRequiredForForm="True"/>
+            <Label Content="Curso" FontWeight="Bold"/>
+            <ComboBox x:Name="cbxCurso" Width="150" SelectionChanged="cbxCurso_SelectionChanged" AutomationProperties.IsRequiredForForm="True">
+            </ComboBox>
+            <Separator Height="30" Visibility="Hidden"></Separator>
+            <Label Content="Profesor" FontWeight="Bold"/>
+            <ComboBox x:Name="cbxProfesor" Width="150" BorderBrush="#FFF61111" AutomationProperties.IsRequiredForForm="True">
+            </ComboBox>
+            <Separator Height="80px" Visibility="Hidden"></Separator>
+            <Button x:Name="btnRegistroProf" Content="REGISTRAR" Width="150" Background="#FFF60B0B" Height="24" Margin="55,0" Click="btnRegistroProf_Click"/>
+            <Separator Height="15px" Visibility="Hidden"></Separator>
+            <Button x:Name="btnLimpiar" Content="LIMPIAR" HorizontalAlignment="Left" Height="25" Margin="55,0,0,0" Width="150" Background="#FF15E1E5" Click="btnLimpiar_Click"/>
+            <Separator Height="15px" Visibility="Hidden"></Separator>
+            <Button x:Name="btnActualizar" Content="ACTUALIZAR" HorizontalAlignment="Left" Margin="55,0,0,0" VerticalAlignment="Top" Width="150" Background="#FF3FE80A" Height="22" Click="btnActualizar_Click"/>
+            <Separator Height="15" Visibility="Hidden"></Separator>
+            <Button x:Name="btnEliminar" Content="ELIMINAR" HorizontalAlignment="Left" Margin="55,0,0,0" VerticalAlignment="Top" Width="150" Background="#FFF6EF0C" Click="btnEliminar_Click"/>
+
+        </StackPanel>
+        <DataGrid x:Name="datosMaterias" HorizontalAlignment="Left" Height="348" Margin="420,170,0,0" VerticalAlignment="Top" Width="450"/>
+        <Button x:Name="btnCerrar" Content="SALIR" HorizontalAlignment="Left" Margin="817,146,0,0" VerticalAlignment="Top" Width="53" Background="#FFE80F0F" Click="btnCerrar_Click" Height="24" FontWeight="Bold"/>
+        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="345,103,0,0" VerticalAlignment="Top" Width="80" Background="#FF0CF7DA" Height="23" Click="btnBuscar_Click" FontWeight="Bold"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="23" Margin="310,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" IsEnabled="False"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,74 @@
+﻿<Window x:Class="SistemaCalificacion.registroProf"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaCalificacion"
+        mc:Ignorable="d"
+        Title="registroProf" Height="700" Width="1200"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="420" Margin="0,0,-0.4,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="794" Opacity="0.5">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="imagen/3.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle HorizontalAlignment="Left" Height="670" Margin="0,0,-0.4,0" Stroke="Black" VerticalAlignment="Top" Width="1194">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="imagen/3.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <StackPanel HorizontalAlignment="Left" Height="668" Margin="34,2,0,0" VerticalAlignment="Top" Width="260">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF030000" Offset="1"/>
+                    <GradientStop Color="Black" Offset="0.101"/>
+                    <GradientStop Color="#FF413A3A" Offset="0.887"/>
+                    <GradientStop Color="#FFD00808" Offset="0.543"/>
+                    <GradientStop Color="#FF8FE71E" Offset="0.415"/>
+                    <GradientStop Color="#FF5F0505" Offset="0.731"/>
+                    <GradientStop Color="#FF023E45" Offset="0.271"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Separator Height="10"></Separator>
+            <Label Content="REGISTRO DE PROFESORES" Width="200" Foreground="#FFFAF9F9" FontFamily="Kristen ITC" FontWeight="Bold"></Label>
+            <Separator Height="10"></Separator>
+            <Label Content="Carnet de Identidad" Foreground="#FFFAF9F9" FontWeight="Bold"/>
+            <TextBox x:Name="txtCi"/>
+            <Label Content="Apellidos Paterno" FontWeight="Bold" Foreground="#FFF9F8F8"/>
+            <TextBox x:Name="txtApaterno" Height="23" TextWrapping="Wrap"/>
+            <Label Content="Apellidos Materno" Foreground="#FFF6F2F2" FontWeight="Bold"/>
+            <TextBox x:Name="txtAmaterno" Height="23" TextWrapping="Wrap"/>
+            <Label Content="Nombres" FontWeight="Bold" Foreground="#FFF7F3F3"/>
+            <TextBox x:Name="txtNombres" Height="23" TextWrapping="Wrap"/>
+            <Label Content="Dirección" FontWeight="Bold" Foreground="#FFF6F6F6"/>
+            <TextBox x:Name="txtDireccion" Height="23" TextWrapping="Wrap"/>
+            <Label Content="Telefono / Celular" Foreground="#FFF9F6F6" FontWeight="Bold"/>
+            <TextBox x:Name="txtTelf" Height="23" TextWrapping="Wrap"/>
+            <Label Content="Correo Electrónico" FontWeight="Bold" Foreground="#FFF9F6F6"/>
+            <TextBox x:Name="txtEmail" Height="23" TextWrapping="Wrap"/>
+            <Label Content="Sexo" Foreground="#FFFAF9F9" FontWeight="Bold" FontSize="14"/>
+            <ComboBox x:Name="cbxSexo" Width="150">
+                <ComboBoxItem>M</ComboBoxItem>
+                <ComboBoxItem>F</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Seleccione Curso" Foreground="#FFFAF9F9" FontWeight="Bold"></Label>
+            <ComboBox x:Name="cbxCurso" Width="150"/>
+
+            <Separator Height="15px" Visibility="Hidden"></Separator>
+            <Button x:Name="btnRegistroProf" Content="REGISTRAR" Width="100" Background="#FFF60B0B" Click="btnRegistroProf_Click" Height="24" Margin="55,0"/>
+            <Separator Height="15px" Visibility="Hidden"></Separator>
+            <Button x:Name="btnLimpiar" Content="LIMPIAR" Width="100" Background="#FF15E1E5" Click="btnLimpiar_Click"/>
+            <Separator Height="15px" Visibility="Hidden"></Separator>
+            <Button x:Name="btnActualizar" Content="ACTUALIZAR" Width="100" Background="#FF3FE80A" Click="btnActualizar_Click" Height="22"/>
+            <Separator Height="15"></Separator>
+            <Button x:Name="btnEliminar" Content="ELIMINAR" Width="100" Background="#FFF6EF0C" Click="btnEliminar_Click"/>
+        </StackPanel>
+        <DataGrid x:Name="datosProf" HorizontalAlignment="Left" Height="348" Margin="307,146,0,0" VerticalAlignment="Top" Width="839"/>
+        <Button x:Name="btnCerrar" Content="SALIR" HorizontalAlignment="Left" Margin="1071,0,0,514" VerticalAlignment="Bottom" Width="75" Background="#FFE80F0F" Click="btnCerrar_Click" Height="33"/>
+        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="339,68,0,0" VerticalAlignment="Top" Width="80" Background="#FF0CF7DA" Click="btnBuscar_Click" Height="23" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="23" Margin="307,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" IsEnabled="False"/>
+    </Grid>
+</Window>
